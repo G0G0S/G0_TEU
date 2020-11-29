@@ -9,7 +9,7 @@ Este Script incluye las siguientes funcionalidades:
 + 3- Anti-Spawn de algunos vehiculos. (Leer mas abajo)
 + 4- Poder apagar todas las luces artificiales de la ciudad. (Leer mas abajo)
 + 5- Zonas seguras. (Leer mas abajo)
-+ 6- Spawn de NPC para venta de drogas. (Leer mas abajo)
++ 6- Spawn de NPC para venta de drogas y mercado negro. (Leer mas abajo)
 + 7- Control del vehiculo en el aire desabilitado.
 + 8- Ningun NPC suelta armas.
 + 9- Ningun vehiculo suelta armas.
@@ -25,8 +25,8 @@ Este Script incluye las siguientes funcionalidades:
 + 19- Control de poblacion y spawn de vehiculos aleatorios. (Leer mas abajo)
 + 20- Supresion de ruidos de ambiente.
 + 21- Limite de velocidad de cualquier entidad a 280km/h.
-+ 22- Codigo necesario para el funcionamiento del sistema de Codigos Regalo. (Leer mas abajo)
-+ 23- Codigo necesario para el funcionamiento del sistema de Logeo de todo tipo de comandos usados. (Leer mas abajo)
++ 22- Codigo necesario para el funcionamiento del Sistema de Codigos Regalo. (Leer mas abajo)
++ 23- Codigo necesario para el funcionamiento del Sistema de Logeo de todo tipo de comandos usados. (Leer mas abajo)
 + 24- Sistema de Whitelist. (Leer mas abajo)
 
 **INFORMACION SOBRE ALGUNAS FUNCIONES ANTES MENCIONADAS**
@@ -88,5 +88,58 @@ Este Script incluye las siguientes funcionalidades:
 + x= -39.48, y=-1095.00, z=27.42
 + x= 241.12, y=-1378.97, z=29.50
 
-6- Spawn de NPC para venta de drogas.
-+ Esta funcionalidad hace Spawn de Peds como compradores de droga especializados en las siguientes zonas. Esta funcion debe de ir acompañada del script modificado por G0G0S "esx_illegal".
+6- Spawn de NPC para venta de drogas y mercado negro.
++ Esta funcionalidad hace Spawn de Peds como compradores de droga especializados en las siguientes zonas.
++ **Esta funcion debe de ir acompañada del script modificado por G0G0S "esx_illegal".**
++ x=277.70, y=2205.52, z=130.40
++ x=1928.55, y=-3087.33, z=-6.00
++ x=-582.33, y=-1611.24, z=26.01
+
+12- Sistema "Forzar".
++ Esta funcionalidad agrega el Sistema de Forzar que todo el mundo conoce, simplemente usando el comando /forzar, esta integrado con el servicios de emergencias.
++ **Esta funcion debe de ir acompañada del script modificado por G0G0S "Emergency".**
+
+16- Opciones del Menu de Pausa personalizadas.
++ Esta funcionalidad agrega al Menu de Pausa textos personalizados a las opciones que hay en el.
+
+19- Control de poblacion y spawn de vehiculos aleatorios.
++ Esta funcionalidad te permite modificar la cantidad de Peds y Vehiculos que se generan por la calle, como el trafico de los mismos, ademas de controlar la cantidad Policias, Medicos, Taxistas y Basureros aleatorios que aparecen.
++ Tambien arregla fallos como los globos que caen del cielo.
+
+22- Codigo necesario para el funcionamiento del Sistema de Codigos Regalo.
++ Esta funcionalidad agrega un Sistema automatizado/manual de generacion de codigos regalo, los cuales pueden contener Items o Dinero, Dinero Negro o Saldo Bancario y ademas son enviados directamente a Discord gracias a una integracion.
++ Los Codigos pueden ser generados desde Consola o Comandos dentro del juego.
++ **Esta funcion debe de ir acompañada del script modificado por G0G0S "Kyk-RedeemCodes".**
+
+23- Codigo necesario para el funcionamiento del Sistema de Logeo de todo tipo de comandos usados.
++ Esta funcionalidad es un Sistema de LOG Completo de **CUALQUIER COMANDO** que se ejecute en el servidor, los comandos que usen cualquier tipo de rango como Admin o Usuario seran enviados directamente a Discord gracias a una integracion.
++ Notifica que comando a usado y quien hizo uso de el.
++ **Esta funcion debe de ir acompañada del siguiente fragmento de codigo, el cual debera ser implementado en cada "RegisterCommand" de tu servidor.**
+```
+RegisterCommand() --Para este tipo lo siguiente:
+
+    local nombreJugador = GetPlayerName(source)
+    TriggerEvent('G0_discord:comando',nombreJugador .. " A usado /comando ")
+	
+ESX.RegisterCommand() --Para este tipo lo siguiente:
+
+	local idJugador = xPlayer.source
+	local nombreJugador = GetPlayerName(idJugador)
+    TriggerEvent('G0_discord:comando',nombreJugador .. " A usado /comando ")
+```
+
+24- Sistema de Whitelist.
++ Esta funcionalidad es un Sistema de Whitelist con opcion de Solo "Contraseña", Solo "Identificador" o "Contraseña + Identificador". Incluye los siguientes "Idetificadores":
++ Steam ID
++ Licencia FiveM
++ Xbox ID
++ Microsoft Live ID
++ Discord ID
++ IP
+
+
+# ESTE SCRIPT ESTA ENCRIPTADO PARA EVITAR SU DISTRIBUCION SIN MI CONSENTIMIENTO
+
++ **CUALQUIER BUG O REPORTE HAGANLO EN SU CORRECTA FORMA A TRAVES DE GITHUB.**
++ **CUALQUIERA QUE QUIERA HACER USO DEL SCRIPT ESTA EN SU DERECHO, COMO EL MIO EN COMPARTIRLO CON TODOS USTEDES, CLARO ESTA QUE EN ESTE CASO ESTA PERSONALIZADO A MI GUSTO COMO POR EJEMPLO LOS BLIPS, TEXTOS Y CORDENADAS**
++ **CUALQUIERA QUE QUIERA UNA VERSION PERSONALIZADA PARA EL O INCLUSO LA VERSION LIBRE 100% DE ESTE SCRIPT, QUE SE PONGA EN CONTACTO CONMIGO EN DISCORD: "G0G0S#6778"**
