@@ -29,6 +29,26 @@ Este Script incluye las siguientes funcionalidades:
 + 23- Codigo necesario para el funcionamiento del Sistema de Logeo de todo tipo de comandos usados. (Leer mas abajo)
 + 24- Sistema de Whitelist. (Leer mas abajo)
 
+## Descarga & Instalacion
+
+### Usando [fvm](https://github.com/qlaffont/fvm-installer)
+```
+fvm install --save --folder=esx /G0G0S/G0_TEU
+```
+
+### Usando Git
+```
+cd resources
+git clone https://github.com/G0G0S/G0_TEU
+```
+
+## Instalacion
+- Añade esto a tu `server.cfg`:
+
+```
+start G0_TEU
+```
+
 **INFORMACION SOBRE ALGUNAS FUNCIONES ANTES MENCIONADAS**
 
 1- Blips.
